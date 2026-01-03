@@ -13,7 +13,7 @@ public class NearestCarDispatcher implements DispatcherStrategy {
         int minDistance = Integer.MAX_VALUE;
 
         for (Car car : cars) {
-            int distance = Math.abs(car.getFloor() - request.getFloor());
+            int distance = Math.abs(car.getCurrentFloor() - request.getFloor());
             if (distance < minDistance) {
                 minDistance = distance;
                 chosenCar = car.getCarId();
